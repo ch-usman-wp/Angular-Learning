@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/udemy-first-app/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

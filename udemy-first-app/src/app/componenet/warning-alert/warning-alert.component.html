@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <p class="warning-text">warning alert test</p>
+        <p class="succes-text">warning alert test</p>
+        <div class="string-interpolation">
+            <h2>Interpolation</h2>
+            <p>Servier Id is {{serverId}} and the server Name {{serverName}}  through interpolation.</p>
+        </div>
+        <div class="propertyBinding">
+            <h3>Property Binding</h3>
+
+            <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+            <p [innerText]="allowNewServer"></p>
+            <p>{{serverCreatedStatus}}</p>
+
+            <input type="text" class="form-control"
+            (input)="onUpdateServerName($event)">
+
+            <input type="text" class="form-control" [(ngModel)]="serversName">
+
+            <p>{{serversName}}</p>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h3>Assignment Solution</h3>
+        <label for="" class="form-label">User Name</label>
+        <input class="form-control" type="text" [(ngModel)]="username">
+        <p>{{username}}</p>
+        <button class="btn btn-success" 
+        [disabled]="username === ''"
+        (click)="username= ''">Submit</button>
+    </div>
+    <div class="directiv mt-2 mb-4">
+        <h3>Directive</h3>
+        <input type="text" class="form-control mb-3" [(ngModel)]="serverNameAdd">
+        <button class="btn btn-primary" (click)="OncreatedServer()">Add Server</button>
+        <p *ngIf="serverCreated; else noServer">Server was created, Server name is {{serverNameAdd}}</p>
+        <ng-template #noServer>
+            <p>No server was created</p>
+        </ng-template>
+
+    </div> 
+
+</div>
+
+
