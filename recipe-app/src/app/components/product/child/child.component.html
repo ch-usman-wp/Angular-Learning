@@ -1,0 +1,5 @@
+<div class="container-fluid bg-success p-4 text-light text-center mt-4">
+    <h4 *ngIf="!productSelected">Please select product</h4>
+    <h4 *ngIf="productSelected">{{productName}} is selected</h4>
+    <button class="btn btn-primary" (click)="addCart()">Add To cart</button>
+</div>
