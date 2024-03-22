@@ -7,13 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+number: number;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
 
   }
-  onLoadServers(){
-    this.router.navigate(['/servers'])
+  onLoadServers(id: number){
+    this.router.navigate(['/servers', id, 'edit'], {queryParams: {allowEdit: '1'}, fragment: '1'})
   }
+  onLogin(){}
+  onLogout(){}
 }
