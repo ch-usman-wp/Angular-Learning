@@ -1,0 +1,21 @@
+<div style="text-align: center;">
+<h1><a routerLink="/">Welcome</a></h1>
+<div>
+  <a routerLink="home" routerLinkActive="active">Home</a> | 
+  <a routerLink="aboutus" routerLinkActive="active">About Us</a> | 
+  <a routerLink="contactus" routerLinkActive="active">Contect Us</a> |
+  <a routerLink="login" routerLinkActive="active">Login</a> | 
+
+  <!-- <a [routerLink]="[{outlets:{outlet2:['contactusnew','501']}}]">Contect Us New</a> -->
+</div>
+<div style="background-color: green;">
+  <router-outlet></router-outlet>
+</div>
+<app-comp1></app-comp1>
+<app-comp2></app-comp2>
+<!-- <div style="background-color: purple;">
+  <router-outlet name="outlet2"></router-outlet>
+</div> -->
+
+
+</div>
