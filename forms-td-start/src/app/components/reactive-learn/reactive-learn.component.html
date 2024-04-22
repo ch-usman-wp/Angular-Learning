@@ -1,0 +1,54 @@
+<h1>Assignment form</h1>
+<form>
+  <div class="form-group"></div>
+</form>
+
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+          <div id="user-data" formGroupName="userData">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input 
+              type="text" 
+              id="username"
+              formControlName="username"
+              class="form-control">
+              <p class="help-block" *ngIf="!signupForm.get('userData.username').valid && signupForm.get('userData.username').touched">This field is required</p>
+            </div>
+            <div class="form-group">
+              <label for="email">Mail</label>
+              <input type="email" id="email" class="form-control"
+              name="email"
+              formControlName="email">
+              <p class="help-block" *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched">Valid email address</p>
+            </div>
+            <!-- <div class="mx-3" formArrayName="hobbies">
+              <h4>Your Hobbies</h4>
+              <button class="btn btn-primary" type="button"
+              (click)="onAddHobby()">Add Hobby</button>
+              <div class="form-group"
+              *ngFor="hobbyControl of hobbyControls; let i = index;">
+                <input type="text" class="form-control" [formControlName]="i">
+              </div>
+            </div> -->
+          <div class="form-group" *ngFor="let gender of genders">
+            <label>
+              <input type="radio"
+              name="gender"
+              formControlName="gender"
+              [value]="gender">
+              {{gender}}
+            </label>
+          </div>
+        </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+  
+        <hr>
+      </div>
+    </div>
+    
+  </div>
+  
