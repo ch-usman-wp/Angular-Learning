@@ -1,0 +1,52 @@
+{
+  "saller": [
+    {
+      "id": "3f2e",
+      "name": "usman",
+      "email": "usman@gmail.com",
+      "password": "abc@gmail.com"
+    },
+    {
+      "id": "9163",
+      "firstName": "ismail",
+      "lastName": "sarwar",
+      "email": "ismail@secbuf.com",
+      "password": "123"
+    },
+    {
+      "id": "7902",
+      "firstName": "test",
+      "lastName": "Luxury",
+      "email": "navisi9055@secbuf.com",
+      "password": "navisi9055!"
+    },
+    {
+      "id": "96b7",
+      "firstName": "usman",
+      "lastName": "haider",
+      "email": "navisi9055@secbuf.com",
+      "password": "navisi9055!"
+    },
+    {
+      "id": "9a3a",
+      "firstName": "usman",
+      "lastName": "haider",
+      "email": "navisi9055@secbuf.com",
+      "password": "navisi9055!"
+    },
+    {
+      "id": "c7e2",
+      "firstName": "test 1",
+      "lastName": "latest",
+      "email": "test@secbuf.com",
+      "password": "123"
+    },
+    {
+      "id": "3f41",
+      "firstName": "usman",
+      "lastName": "haider",
+      "email": "navisi9055@secbuf.com",
+      "password": "navisi9055!"
+    }
+  ]
+}

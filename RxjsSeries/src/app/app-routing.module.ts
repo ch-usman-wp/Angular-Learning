@@ -6,6 +6,8 @@ import { ListComponent } from './component/observable/list/list.component';
 import { FormEventComponent } from './component/observable/form-event/form-event.component';
 import { IntervalComponent } from './component/observable/interval/interval.component';
 import { OfFromComponent } from './component/observable/of-from/of-from.component';
+import { ToArrayComponent } from './component/observable/to-array/to-array.component';
+import { CustomComponent } from './component/observable/custom/custom.component';
 
 
 const routes: Routes = [
@@ -14,9 +16,11 @@ const routes: Routes = [
     {path: '', component:ListComponent, title:'all'},
     {path: 'formEvent', component:FormEventComponent, title:'form-event'},
     {path: 'interval', component:IntervalComponent, title:'interval'},
-    {path: 'ofFrom', component:OfFromComponent, title:'ofFrom'},
+    {path: 'to-array', component:ToArrayComponent, title:'to-array'},
+    {path: 'ofFrom', component:OfFromComponent, title:'to-array'},
+    {path: 'customObser', component:CustomComponent, title:'customObser'},
   ]},
-
+ 
   {path:'**', redirectTo:'promise'}
 ];
 

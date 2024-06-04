@@ -1,0 +1,88 @@
+<!-- Registration 13 - Bootstrap Brain Component -->
+<section class="bg-light py-3 py-md-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        @if (!showLogin) {<div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+            <div class="card border border-light-subtle rounded-3 shadow-sm">
+              <div class="card-body p-3 p-md-4 p-xl-5">
+                
+                <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Enter your details to register</h2>
+                <form #sellerSignUp="ngForm" (ngSubmit)="signUp(sellerSignUp.value)">
+                  <div class="row gy-2 overflow-hidden">
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="firstName" ngModel id="firstName" placeholder="First Name" required>
+                        <label for="firstName" class="form-label">First Name</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="lastName" ngModel id="lastName" placeholder="Last Name" required>
+                        <label for="lastName" class="form-label">Last Name</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" ngModel id="email" placeholder="name@example.com" required>
+                        <label for="email" class="form-label">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" ngModel id="password" value="" placeholder="Password" required>
+                        <label for="password" class="form-label">Password</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="d-grid my-3">
+                        <button class="btn btn-primary btn-lg" type="submit">Sign up</button>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <p class="m-0 text-secondary text-center">Already have an account? <a (click)="openLogin()" class="link-primary text-decoration-none">Sign in</a></p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>}
+        
+        <!-- login area  -->
+        @if (showLogin) {
+        <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+            <div class="card border border-light-subtle rounded-3 shadow-sm">
+              <div class="card-body p-3 p-md-4 p-xl-5">
+                
+                <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Enter your details to register</h2>
+                <form #sellerSignIn="ngForm" (ngSubmit)="logIn(sellerSignIn.value)">
+                  <div class="row gy-2 overflow-hidden">
+                    <h3 class="bg-danger">{{authError}}</h3>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" ngModel id="email" placeholder="name@example.com" required>
+                        <label for="email" class="form-label">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" ngModel id="password" value="" placeholder="Password" required>
+                        <label for="password" class="form-label">Password</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="d-grid my-3">
+                        <button class="btn btn-primary btn-lg" type="submit">Sign In</button>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <p class="m-0 text-secondary text-center">Haven't account? <a (click)="openSignUp()" class="link-primary text-decoration-none">Sign up</a></p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>

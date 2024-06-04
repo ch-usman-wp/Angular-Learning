@@ -10,6 +10,8 @@ import { ListComponent } from './component/observable/list/list.component';
 import { FormEventComponent } from './component/observable/form-event/form-event.component';
 import { IntervalComponent } from './component/observable/interval/interval.component';
 import { OfFromComponent } from './component/observable/of-from/of-from.component';
+import { ToArrayComponent } from './component/observable/to-array/to-array.component';
+import { CustomComponent } from './component/observable/custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { OfFromComponent } from './component/observable/of-from/of-from.componen
     FormEventComponent,
     IntervalComponent,
     OfFromComponent,
+    ToArrayComponent,
+    CustomComponent,
   ],
   imports: [
     BrowserModule,
