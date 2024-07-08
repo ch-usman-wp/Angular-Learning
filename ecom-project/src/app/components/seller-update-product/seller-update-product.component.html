@@ -1,0 +1,55 @@
+<div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4 m-auto mt-5">
+    <div class="card border border-light-subtle rounded-3 shadow-sm">
+      <div class="card-body p-3 p-md-4 p-xl-5">
+      <p class="badge rounded-pill text-bg-primary">{{addProductMessage}}</p>
+        <h2 class="fs-6 fw-normal text-center text-secondary mb-4">Update your Product</h2>
+        <form #addProduct="ngForm" (ngSubmit)="updatedProduct(addProduct.value)">
+          <div class="row gy-2 overflow-hidden">
+            
+            <div class="col-12">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="name" ngModel="{{productData?.name}}" id="name" placeholder="Product Name" required>
+                <label for="text" class="form-label">Product Name</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="price" ngModel="{{productData?.price}}" id="price" value="" placeholder="Product Price" required>
+                <label for="text" class="form-label">Product Price</label>
+              </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="color" ngModel="{{productData?.color}}" id="color" value="" placeholder="Product Color" required>
+                  <label for="text" class="form-label">Product Color</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="category" ngModel="{{productData?.category}}" id="category" value="" placeholder="Product Category" required>
+                  <label for="text" class="form-label">Product Category</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-3">
+                  <textarea type="text" class="form-control" name="discription" ngModel="{{productData?.discription}}" id="discription" value="" placeholder="Product Category" required rows="5" cols="33"></textarea>
+                  <label for="text" class="form-label">Product Discription</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" name="imageUrl" ngModel="{{productData?.imageUrl}}" id="image" value="" placeholder="Enter Product Url" required >
+                  <label for="text" class="form-label">Image Upload</label>
+                </div>
+              </div>
+            <div class="col-12">
+              <div class="d-grid my-3">
+                <button class="btn btn-primary btn-lg" type="submit">Update Product</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

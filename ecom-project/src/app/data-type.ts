@@ -7,3 +7,13 @@ export interface login{
     email: string,
     password: string
 }
+
+export interface product{
+    name: string,
+    price: number,
+    color: string,
+    discription: string,
+    imageUrl: string,
+    category: string,
+    id: number
+}

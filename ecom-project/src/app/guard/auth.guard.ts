@@ -6,13 +6,14 @@ import { SellerService } from '../services/seller.service';
 @Injectable({
   providedIn: 'root'
 })
-export class authGuard implements CanActivate {
+export class AuthGuard implements CanActivate {
+
   constructor(private sellerService: SellerService, private router: Router) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<boolean | UrlTree> | Promise <boolean | UrlTree> | boolean | UrlTree {
+  ): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const isLoggedIn = this.sellerService.isSellerLoggedIn;
     
     if (isLoggedIn) {

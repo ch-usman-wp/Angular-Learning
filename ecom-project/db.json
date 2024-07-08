@@ -2,7 +2,8 @@
   "saller": [
     {
       "id": "3f2e",
-      "name": "usman",
+      "firstName": "usman",
+      "lastName": "haider",
       "email": "usman@gmail.com",
       "password": "abc@gmail.com"
     },
@@ -12,20 +13,6 @@
       "lastName": "sarwar",
       "email": "ismail@secbuf.com",
       "password": "123"
-    },
-    {
-      "id": "7902",
-      "firstName": "test",
-      "lastName": "Luxury",
-      "email": "navisi9055@secbuf.com",
-      "password": "navisi9055!"
-    },
-    {
-      "id": "96b7",
-      "firstName": "usman",
-      "lastName": "haider",
-      "email": "navisi9055@secbuf.com",
-      "password": "navisi9055!"
     },
     {
       "id": "9a3a",
@@ -42,11 +29,31 @@
       "password": "123"
     },
     {
-      "id": "3f41",
+      "id": "947f",
       "firstName": "usman",
       "lastName": "haider",
-      "email": "navisi9055@secbuf.com",
-      "password": "navisi9055!"
+      "email": "usman@gmail.com",
+      "password": "abc@gmail.com"
+    }
+  ],
+  "products": [
+    {
+      "id": "c311",
+      "name": "Miranda Vazquez",
+      "price": "787",
+      "color": "Et consectetur tenet",
+      "category": "Sint tempor ut ab e",
+      "discription": "Et in non voluptate ",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1683288662019-c92caea8276d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "name": "Travis Nelson",
+      "price": "499",
+      "color": "Illo tempore velit",
+      "category": "Dicta sit nulla tota",
+      "discription": "Itaque occaecat id ",
+      "imageUrl": "https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "id": "e571"
     }
   ]
 }

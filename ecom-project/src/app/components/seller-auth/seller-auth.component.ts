@@ -24,6 +24,7 @@ export class SellerAuthComponent {
     this.seller.userSignUp(data)
   }
   logIn(data:SignUp):void{
+    this.authError = " ";
     this.seller.userLogin(data);
     this.seller.isLoginError.subscribe((isError) =>{
       if (isError) {
