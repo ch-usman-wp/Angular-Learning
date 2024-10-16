@@ -1,0 +1,14 @@
+<div>{{startDate | date}}</div>
+
+<ng-container  *ngIf="course">
+    <div  [ngClass]="cardClasses()" [ngStyle]="cardStyles()">
+        <h2 [ngStyle]="cardStyles()">{{cardIndex}} - {{course.description}}</h2>
+        <p>{{course.longDescription}}</p>
+        <div class="course-category" [ngSwitch]="course.category">
+            <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
+            <div class="category" *ngSwitchCase="'ADVANCE'">Advance</div>
+            <div class="category" *ngSwitchDefault>All Category</div>
+        </div>
+        <button (click)="onCourseViewed()">Course View</button>
+    </div>
+</ng-container>

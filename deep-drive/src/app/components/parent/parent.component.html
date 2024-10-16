@@ -1,0 +1,27 @@
+<!-- <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div>
+      <input type="number" formControlName="min" placeholder="min">
+      <div *ngIf="myForm.get('min')?.errors?.['min']">Min value should be at least 1.</div>
+      <div *ngIf="myForm.get('min')?.errors?.['required']">Min value is required.</div>
+    </div>
+    <div>
+      <input type="number" formControlName="max" placeholder="max">
+      <div *ngIf="myForm.get('max')?.errors?.['max']">Max value should not exceed 100.</div>
+      <div *ngIf="myForm.get('max')?.errors?.['required']">Max value is required.</div>
+    </div>
+    
+    <button type="submit">Send</button>
+  </form> -->
+  
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="min">Min Value:</label>
+    <input id="min" formControlName="min" type="number">
+    <div *ngIf="minValueError" style="color: red;">Min value should be less than Max value</div>
+  
+    <label for="max">Max Value:</label>
+    <input id="max" formControlName="max" type="number">
+    <div *ngIf="maxValueError" style="color: red;">Max value should be greater than Min value</div>
+  
+    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+  </form>
+  

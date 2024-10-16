@@ -1,0 +1,29 @@
+<!-- <div class="courses" >
+    @for (course of courses; track $index;  let count = $count; let first = $first; let last = $last;
+    let even = $even; let odd = $odd)
+    {
+        <h1>Count: {{count}}</h1>
+        <app-course-card 
+        [index] = "$index"
+        [class.is-first]= "first"
+        [class.is-last]= "last"
+        [class.is-even]= "even"
+        [class.is-odd]= "odd"
+        (courseSelected)="onCourseSelected($event)" [course]="course" />
+    }
+    @empty{
+        <h1>No course available</h1>
+    }
+</div>  -->
+
+<!-- <div>Start Date: {{startDate | date: 'MMM dd yyy'}} </div> -->
+
+<!-- <div>{{ price | currency: 'EUR'  }}</div>
+<div> {{ rate  }}</div>
+{{ courses | json }} -->
+
+<div class="courses">
+    <app-course-card *ngFor = "let course of courses ; index as i; first as isFirst" 
+    [class.is-first]="isFirst"
+     (courseSelected)="onCourseSelected($event)" [course]="course" [cardIndex]="i +1"/>  
+</div>
